@@ -1,0 +1,2 @@
+waiting queue not impemented
+pause button not implemented
