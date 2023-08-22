@@ -15,10 +15,10 @@ public class ClubGrid {
 	private GridBlock entrance; //hard coded entrance
 	private final static int minX =5;//minimum x dimension
 	private final static int minY =5;//minimum y dimension
-	private Clubgoer[] patrons;
+	public Clubgoer[] patrons;
 	private PeopleCounter counter;
 	
-	ClubGrid(int x, int y, int [] exitBlocks,PeopleCounter c,Clubgoer[] patrons ) throws InterruptedException {
+	ClubGrid(int x, int y, int [] exitBlocks,PeopleCounter c) throws InterruptedException {
 		if (x<minX) x=minX; //minimum x
 		if (y<minY) y=minY; //minimum x
 		this.x=x;
@@ -28,7 +28,7 @@ public class ClubGrid {
 		this.initGrid(exitBlocks);
 		entrance=Blocks[getMaxX()/2][0];
 		counter=c;
-		 this.patrons = patrons;
+		outside = Blocks[getMaxX()/2][0];
 		}
 	
 	//initialise the grsi, creating all the GridBlocks
@@ -125,19 +125,7 @@ public class ClubGrid {
 			counter.personLeft(); //add to counter
 			myLocation.setInRoom(false);
 			entrance.notifyAll();
-			if(counter.getWaiting() > 0)
-			{
-				for(int i = 0; i<patrons.length; i++)
-				{
-					if(patrons[i].getLocation() == outside)
-					{
-						patrons[i].enterClub();
-						break;
-					}
-				}
-
-
-			}
+	
 	}
 
 	public GridBlock getExit() {
