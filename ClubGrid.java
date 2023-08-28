@@ -125,7 +125,7 @@ public class ClubGrid {
 			counter.personLeft(); //add to counter
 			myLocation.setInRoom(false);
 			entrance.notifyAll();
-	
+			
 	}
 
 	public GridBlock getExit() {
