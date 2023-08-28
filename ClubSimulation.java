@@ -1,3 +1,7 @@
+/**
+ * The ClubSimulation class is a Java program that simulates a club environment, with clubgoers
+ * entering and exiting the club.
+ */
 //M. M. Kuttel 2023 mkuttel@gmail.com
 
 package clubSimulation;

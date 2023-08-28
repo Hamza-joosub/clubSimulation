@@ -55,6 +55,9 @@ public class Clubgoer extends Thread {
 
 
 	//check to see if user pressed pause button
+	/**
+	 * The function checks if a flag is set to pause a process and waits until it is unset.
+	 */
 	protected void checkPause() throws InterruptedException {
 		// THIS DOES NOTHING - MUST BE FIXED
 		synchronized (isPaused){
@@ -65,6 +68,7 @@ public class Clubgoer extends Thread {
 		}
     }
 
+	// 
 	protected void startSim() throws InterruptedException {
 		// THIS DOES NOTHING - MUST BE FIXED
 		synchronized (entryLatch){
