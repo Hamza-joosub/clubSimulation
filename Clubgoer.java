@@ -53,7 +53,6 @@ public class Clubgoer extends Thread {
 	//getter
 	public  synchronized int getSpeed() { return movingSpeed; }
 
-	//setter
 
 	//check to see if user pressed pause button
 	protected void checkPause() throws InterruptedException {
